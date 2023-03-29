@@ -36,12 +36,10 @@ function onCountryInput() {
 function renderCountryList(countries) {
   const markup = countries
     .map(({ name, flags }) => {
-      const { official } = name;
-      const { svg } = flags;
       return `
           <li class="country-list__item">
-              <img class="country-list__flag" src="${svg}" alt="Flag of ${official}" width = 20px height = 20px  >
-              <h2 class="country-list__name">${official}</h2> 
+              <img class="country-list__flag" src="${flags.svg}" alt="Flag of ${name.official}" width = 190px height = 160px border >
+              <h2 class="country-list__name">${name.official}</h2> 
           </li>
           `
     })
